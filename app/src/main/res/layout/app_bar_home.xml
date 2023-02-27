@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/app_theme"
+            android:elevation="8dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <ImageView
+                android:id="@+id/home_id"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/menu_icon_home"
+                android:layout_marginEnd="18dp"
+                android:visibility="gone"
+                android:layout_gravity="end"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tv_title_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:ignore="HardcodedText,SmallSp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/suggestiveSearchET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/background_blue"
+                    android:drawableStart="@drawable/icon_search"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:paddingStart="8dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="3dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="#99ffffff"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:cursorVisible="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/notification"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="LabelFor" />
+
+
+                <RelativeLayout
+                    android:id="@+id/notification"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/suggestiveSearchET"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlHardcoded" >
+
+                    <ImageView
+                        android:id="@+id/notification_id"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/notification"
+                        android:layout_marginRight="8dp"
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tvNotification"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape_circle_red"
+                        android:gravity="center"
+                        android:text="0"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </RelativeLayout>
+              <!--  <ImageView
+                    android:id="@+id/favourite"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="16dp"
+                    android:adjustViewBounds="true"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/suggestiveSearchET"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/notification"
+                    tools:ignore="ContentDescription" />-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_theme"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <fragment
+            android:id="@+id/navHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:navGraph="@navigation/home_navigation"
+           />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

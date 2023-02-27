@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_theme"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/civil_aviation_title"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@color/dashboard_title"
+            android:elevation="8dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/content_list_layout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ministry_icon"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/civil_aviation_logo"
+                app:layout_constraintBottom_toTopOf="@+id/copyright_simec"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/copyright_simec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="@string/air_passenger_aid"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:fontFamily="@font/kevlar_underwear"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ministry_icon"
+                />
+
+            <TextView
+                android:id="@+id/copyrighdt_simec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/ministry_of_civil_aviation_tourism"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:fontFamily="@font/kevlar_underwear"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/copyright_simec"
+                 />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/app_theme"
+        android:padding="@dimen/text_12"
+        app:layout_constraintTop_toBottomOf="@+id/civil_aviation_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:id="@+id/emptyView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_data_found"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:layout_marginTop="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+
+         <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/content_list_recycler_view"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginTop="10dp"
+          tools:itemCount="10"
+          tools:listitem="@layout/item_home_content_list"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintVertical_bias="1.0" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/teal_200"
+            android:layout_marginTop="225dp"
+            android:progressTint="@color/white"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

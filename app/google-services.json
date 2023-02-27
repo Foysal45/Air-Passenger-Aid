@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "197831526803",
+    "project_id": "air-passenger-aid",
+    "storage_bucket": "air-passenger-aid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:197831526803:android:5dbf45ab41692a9603c066",
+        "android_client_info": {
+          "package_name": "com.mocat.airpassengeraid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "197831526803-dutp8rnbhsq2r96dbt0mg7si8q4vddt2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD25g5gczvb0RLK-tSYl8EFxGtOjrsFIfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "197831526803-dutp8rnbhsq2r96dbt0mg7si8q4vddt2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_theme"
+    tools:context=".ui.splash.SplashActivity">
+
+
+        <ImageView
+        android:id="@+id/civil_aviation_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/cd"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layout_seikh_mujibor_rahman"
+        android:src="@drawable/civil_aviation_logo" />
+
+    <TextView
+        android:id="@+id/air_passenger_aid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/air_passenger_aid"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="15dp"
+        android:textStyle="normal"
+        android:visibility="visible"
+        android:fontFamily="@font/kevlar_underwear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/civil_aviation_logo"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/ministry_of_civil_aviation_tourism"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ministry_of_civil_aviation_tourism"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        android:textStyle="normal"
+        android:visibility="gone"
+        android:fontFamily="@font/kevlar_underwear"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/air_passenger_aid"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/akash_pothe_jatri_sohaika"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/akash_pothe_jatri_sohaika"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="15dp"
+        android:textStyle="normal"
+        android:visibility="gone"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/civil_aviation_logo"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/beshorkari_biman_poribohon_O_porjoton_montronaloy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/beshorkari_biman_poribohon_O_porjoton_montronaloy"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        android:textStyle="normal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/akash_pothe_jatri_sohaika"
+        tools:ignore="SmallSp" />
+
+    <!--<ProgressBar
+        android:id="@+id/loadingProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="18dp"
+        android:indeterminate="true"
+        android:theme="@style/MocatLinearProgress"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/copyright_simec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>-->
+
+
+     <!-- <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:scaleType="centerInside"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/splash_loader"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />-->
+
+    <TextView
+        android:id="@+id/copyright_simec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/copyright"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/layout_seikh_mujibor_rahman"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SmallSp" />
+
+    <LinearLayout
+           android:id="@+id/layout_seikh_mujibor_rahman"
+           android:layout_width="match_parent"
+           android:layout_height="170dp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent">
+
+               <ImageView
+                   android:id="@+id/image_view_seikh_mujib"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:src="@drawable/mujibs_bangladesh_logo"
+                   android:contentDescription="@string/cd"
+                    android:scaleType="fitXY" />
+       </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

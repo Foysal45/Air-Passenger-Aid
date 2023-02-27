@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="5dp"
+    app:cardBackgroundColor="@color/content_item"
+    app:cardCornerRadius="4dp"
+    app:contentPadding="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/name_liable_person"
+            android:layout_width="247dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginBottom="2dp"
+            android:text="Air Passenger Aid"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mobileNumberLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/name_liable_person"
+            app:layout_constraintTop_toTopOf="@id/name_liable_person">
+
+            <ImageView
+                android:id="@+id/mobileLogo"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="3dp"
+                android:contentDescription="@string/cd"
+                android:src="@drawable/ic_call"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mobile_liable_person"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mobile_liable_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:includeFontPadding="false"
+                android:paddingBottom="1dp"
+                android:text="01772248149"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mobileLogo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/name_liable_person" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="telephone_liable_person,email_liable_person" />
+
+        <TextView
+            android:id="@+id/telephone_liable_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/important_contact_telephone"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/separator" />
+
+        <TextView
+            android:id="@+id/telephone_number_liable_person"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toBottomOf="@id/separator"
+            android:text="02-890 1844" />
+
+        <TextView
+            android:id="@+id/email_liable_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/important_contact_email"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/telephone_liable_person" />
+
+        <TextView
+            android:id="@+id/liable_person_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier"
+            app:layout_constraintTop_toBottomOf="@id/telephone_number_liable_person"
+            android:text="abcd@gmail.com" />
+
+       <!-- <TextView
+            android:id="@+id/key3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alternative Number"
+            android:textColor="@color/black_80"
+
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_liable_person"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/alterMobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/black_80"
+            android:textIsSelectable="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier"
+            app:layout_constraintTop_toBottomOf="@id/liable_person_email"
+            tools:text="01555555555"
+            tools:visibility="visible" />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

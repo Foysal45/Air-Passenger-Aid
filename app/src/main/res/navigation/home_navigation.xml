@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/nav_dashboard">
+
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.mocat.airpassengeraid.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.mocat.airpassengeraid.ui.home.HomeFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_dashboard_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_HomeSubMenuFragment"
+            app:destination="@id/HomeSubMenuFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.mocat.airpassengeraid.ui.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.mocat.airpassengeraid.ui.feedback.FeedbackFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_feedback" />
+    <fragment
+        android:id="@+id/favouriteListFragment"
+        android:name="com.mocat.airpassengeraid.ui.favourite.FavouriteListFragment"
+        android:label="fragment_favourite_list"
+        tools:layout="@layout/fragment_favourite_list" >
+        <action
+            android:id="@+id/action_favouriteListFragment_to_menuDetailsFragment"
+            app:destination="@id/menuDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/airportMapFragment"
+        android:name="com.mocat.airpassengeraid.ui.airport_map.AirportMapFragment"
+        android:label="fragment_airport_map"
+        tools:layout="@layout/fragment_airport_map" />
+    <fragment
+        android:id="@+id/importantContactFragment"
+        android:name="com.mocat.airpassengeraid.ui.contact_information.ImportantContactFragment"
+        android:label="fragment_important_contact"
+        tools:layout="@layout/fragment_important_contact" />
+    <fragment
+        android:id="@+id/wifiInformationFragment"
+        android:name="com.mocat.airpassengeraid.ui.wifi_info.WifiInformationFragment"
+        android:label="fragment_wifi_information"
+        tools:layout="@layout/fragment_wifi_information" />
+    <fragment
+        android:id="@+id/HomeSubMenuFragment"
+        android:name="com.mocat.airpassengeraid.ui.home.home_sub_menu.HomeSubMenuFragment"
+        android:label="fragment_perp_going_abroad"
+        tools:layout="@layout/fragment_home_sub_menu" >
+        <action
+            android:id="@+id/action_HomeSubMenuFragment_to_menuDetailsFragment"
+            app:destination="@id/menuDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuDetailsFragment"
+        android:name="com.mocat.airpassengeraid.ui.home.home_sub_menu.MenuDetailsFragment"
+        android:label="fragment_menu_details"
+        tools:layout="@layout/fragment_menu_details" >
+        <action
+            android:id="@+id/action_menuDetailsFragment_to_nav_dashboard"
+            app:destination="@id/nav_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.mocat.airpassengeraid.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <activity
+        android:id="@+id/searchActivity"
+        android:name="com.mocat.airpassengeraid.ui.search.SearchActivity"
+        android:label="activity_search"
+        tools:layout="@layout/activity_search" />
+
+
+</navigation>

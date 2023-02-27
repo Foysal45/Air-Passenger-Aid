@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/settingGroup"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/menu_icon_home"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_favourite_list"
+            android:icon="@drawable/menu_icon_favourite"
+            android:title="@string/toolbar_title_favourite_list" />
+
+        <item
+            android:id="@+id/nav_airport_map"
+            android:icon="@drawable/menu_icon_airport_map"
+            android:title="@string/toolbar_title_airport_map" />
+
+        <item
+            android:id="@+id/nav_important_contact"
+            android:icon="@drawable/menu_icon_contact"
+            android:title="@string/toolbar_title_important_contact" />
+
+        <item
+            android:id="@+id/nav_wifi_info"
+            android:icon="@drawable/menu_icon_wifi"
+            android:title="@string/toolbar_title_wifi_information" />
+
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/menu_icon_feedback"
+            android:title="@string/menu_feedback" />
+
+        <item
+            android:id="@+id/nav_complain"
+            android:icon="@drawable/menu_icon_complain"
+            android:title="@string/toolbar_title_complain" />
+
+        <item
+            android:id="@+id/nav_facebook_page"
+            android:icon="@drawable/menu_icon_facebook_page"
+            android:title="@string/toolbar_title_facebook_page" />
+
+        <item
+            android:id="@+id/nav_rating"
+            android:icon="@drawable/menu_icon_app_rating"
+            android:title="@string/menu_rating" />
+
+        <item
+            android:id="@+id/nav_update_app"
+            android:icon="@drawable/menu_icon_update_app"
+            android:title="@string/menu_update_app" />
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/menu_icon_share_app"
+            android:title="@string/menu_share_app" />
+
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="none">
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/menu_icon_app_exit"
+                    android:title="@string/menu_exit_app" />
+    </group>
+
+
+</menu>

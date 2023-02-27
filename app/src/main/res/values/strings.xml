@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Air Passenger Aid</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ministry_title">\t\t\t\t\t\t\t\t\t\t AIR PASSENGER AID\n MINISTRY OF CIVIL AVIATION AND TOURISM</string>
+    <string name="ministry_title_nav_header">\t\t\t\t\t\t\t\tAIR PASSENGER AID\n MINISTRY OF CIVIL AVIATION AND TOURISM</string>
+    <string name="download_app">Download The App : <p><font color="red">*</font></p></string>
+    <string name="wait">Wait</string>
+    <string name="cd">image</string>
+    <string name="copyright">  Design &amp; Developed by - SIMEC System Limited.\nCopyright @ Ministry of civil aviation and tourism</string>
+
+
+    <string-array name="spinner_feedback_type">
+        <item>Feedback Type</item>
+    </string-array>
+
+    <string name="air_passenger_aid">AIR PASSENGER AID</string>
+    <string name="ministry_of_civil_aviation_tourism">MINISTRY OF CIVIL AVIATION AND TOURISM</string>
+    <string name="akash_pothe_jatri_sohaika">আকাশপথে যাত্রী সহায়িকা</string>
+    <string name="beshorkari_biman_poribohon_O_porjoton_montronaloy">বেসরকারি বিমান পরিবহন ও পর্যটন মন্ত্রণালয়</string>
+
+
+    <string name="toolbar_title_notification">নটিফিকেশন</string>
+    <string name="toolbar_title_favourite_list">প্রিয় তালিকা</string>
+    <string name="toolbar_title_airport_map">বিমানবন্দর মানচিত্র</string>
+    <string name="toolbar_title_feedback">ফিডব্যাক</string>
+    <string name="toolbar_title_important_contact">গুরুত্বপূর্ণ যোগাযোগ</string>
+    <string name="toolbar_title_wifi_information">ওয়াইফাই এর তথ্য</string>
+    <string name="toolbar_title_complain">অভিযোগ দিন</string>
+    <string name="toolbar_title_facebook_page">ফেইসবুক পেইজ</string>
+    <string name="toolbar_title_prep_for_goingTo_abroad">বিদেশ গমনের প্রস্তুতি</string>
+
+    <string name="menu_rating">রেটিং দিন</string>
+    <string name="menu_share_app">অ্যাপটি শেয়ার করুন</string>
+    <string name="menu_update_app">অ্যাপ আপডেট</string>
+    <string name="menu_home">হোম</string>
+    <string name="menu_feedback">ফিডব্যাক দিন</string>
+    <string name="menu_exit_app">বন্ধ করুন</string>
+
+    <string name="feedback_user_name_input">নাম</string>
+    <string name="feedback_user_email_input">ইমেইল</string>
+    <string name="feedback_user_mobile_input">মোবাইল</string>
+    <string name="feedback_user_opinion_input">ফিডব্যাক লিখুন</string>
+    <string name="feedback_submit">ফিডব্যাক</string>
+    <string name="no_data_found">কোনো তথ্য পাওয়া যায়নি</string>
+    <string name="important_contact_telephone">টেলিফোন </string>
+    <string name="important_contact_email">ইমেইল</string>
+    <string name="wifi_ssid">SSID</string>
+    <string name="wifi_name">WIFI Name</string>
+    <string name="wifi_password">Password</string>
+
+    <string name="field_empty_error_message_common">This field can not be empty</string>
+    <string name="select_feedback_type">"ফিডব্যাক টাইপ নির্বাচন করুন"</string>
+    <string name="write_correct_mobile_number">"সঠিক মোবাইল নম্বর লিখুন"</string>
+    <string name="write_correct_email">"সঠিক ইমেল লিখুন"</string>
+
+    <string name="api_response_error">"কোথাও কোনো সমস্যা হচ্ছে"</string>
+    <string name="edit_text_search_hint"> সার্চ করুন...</string>
+    <string name="test">test data check</string>
+    <string name="search_expected_toast">অনুগ্রহ করে ন্যূনতম ৩ অক্ষর লিখুন</string>
+    <string name="press_again_to_exit">অ্যাপটি বন্ধ করতে আবার প্রেস করুন</string>
+    <string name="details_page_title">Content Details</string>
+
+
+</resources>
