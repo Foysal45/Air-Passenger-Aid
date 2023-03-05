@@ -11,10 +11,12 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mocat.airpassengeraid.R
 import com.mocat.airpassengeraid.databinding.ActivitySearchBinding
 import com.mocat.airpassengeraid.ui.home.HomeViewModel
+import com.mocat.airpassengeraid.ui.home.home_sub_menu.MenuDetailsFragment
 import com.mocat.airpassengeraid.utils.*
 import org.koin.android.ext.android.inject
 import timber.log.Timber
@@ -70,6 +72,11 @@ class SearchActivity : AppCompatActivity() {
             }else{
                 Toast.makeText(this, resources.getString(R.string.no_data_found), Toast.LENGTH_SHORT).show()
             }*/
+            /*val myFragment = MenuDetailsFragment()
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.menuDetailsFragment, myFragment)
+                .addToBackStack(null)
+                .commit()*/
         }
     }
 

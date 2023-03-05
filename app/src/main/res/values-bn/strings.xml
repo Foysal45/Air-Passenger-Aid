@@ -16,80 +16,6 @@
 
     <string name="air_passenger_aid">AIR PASSENGER AID</string>
     <string name="ministry_of_civil_aviation_tourism">MINISTRY OF CIVIL AVIATION AND TOURISM</string>
-    <string name="akash_pothe_jatri_sohaika">Air passenger assistance</string>
-    <string name="beshorkari_biman_poribohon_O_porjoton_montronaloy">Ministry of Private Aviation and Tourism</string>
-
-
-    <string name="toolbar_title_notification">Notification</string>
-    <string name="toolbar_title_favourite_list">Favourite List</string>
-    <string name="toolbar_title_airport_map">Airpost Map</string>
-    <string name="toolbar_title_feedback">Feedback</string>
-    <string name="toolbar_title_important_contact">Important Contact</string>
-    <string name="toolbar_title_wifi_information">Wifi Information</string>
-    <string name="toolbar_title_complain">Complain</string>
-    <string name="toolbar_title_facebook_page">Facebook Page</string>
-    <string name="toolbar_title_prep_for_goingTo_abroad">Preparation for departure</string>
-
-    <string name="menu_rating">Give a rating</string>
-    <string name="menu_share_app">Share the app</string>
-    <string name="menu_update_app">App update</string>
-    <string name="menu_home">Home</string>
-    <string name="menu_feedback">Give feedback</string>
-    <string name="menu_exit_app">Turn off</string>
-
-    <string name="feedback_user_name_input">Name</string>
-    <string name="feedback_user_email_input">Email</string>
-    <string name="feedback_user_mobile_input">Mobile</string>
-    <string name="feedback_user_opinion_input">Write feedback</string>
-    <string name="feedback_submit">Feedback</string>
-    <string name="no_data_found">No information found</string>
-    <string name="important_contact_telephone">Telephone</string>
-    <string name="important_contact_email">Email</string>
-    <string name="wifi_ssid">SSID</string>
-    <string name="wifi_name">WIFI Name</string>
-    <string name="wifi_password">Password</string>
-
-    <string name="field_empty_error_message_common">This field can not be empty</string>
-    <string name="select_feedback_type">Select the feedback type</string>
-    <string name="write_correct_mobile_number">Enter correct mobile number</string>
-    <string name="write_correct_email">Enter the correct email</string>
-
-    <string name="api_response_error">There is a problem somewhere</string>
-    <string name="edit_text_search_hint"> Search...</string>
-    <string name="test">test data check</string>
-    <string name="search_expected_toast">Please enter a minimum of 3 characters</string>
-    <string name="press_again_to_exit">Press again to close the app</string>
-    <string name="details_page_title">Content Details</string>
-    <string name="language_changed">English</string>
-
-
-</resources>
-
-
-
-
-
-
-
-<!--
-<resources>
-    <string name="app_name">Air Passenger Aid</string>
-    &lt;!&ndash; TODO: Remove or change this placeholder text &ndash;&gt;
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="ministry_title">\t\t\t\t\t\t\t\t\t\t AIR PASSENGER AID\n MINISTRY OF CIVIL AVIATION AND TOURISM</string>
-    <string name="ministry_title_nav_header">\t\t\t\t\t\t\t\tAIR PASSENGER AID\n MINISTRY OF CIVIL AVIATION AND TOURISM</string>
-    <string name="download_app">Download The App : <p><font color="red">*</font></p></string>
-    <string name="wait">Wait</string>
-    <string name="cd">image</string>
-    <string name="copyright">  Design &amp; Developed by - SIMEC System Limited.\nCopyright @ Ministry of civil aviation and tourism</string>
-
-
-    <string-array name="spinner_feedback_type">
-        <item>Feedback Type</item>
-    </string-array>
-
-    <string name="air_passenger_aid">AIR PASSENGER AID</string>
-    <string name="ministry_of_civil_aviation_tourism">MINISTRY OF CIVIL AVIATION AND TOURISM</string>
     <string name="akash_pothe_jatri_sohaika">আকাশপথে যাত্রী সহায়িকা</string>
     <string name="beshorkari_biman_poribohon_O_porjoton_montronaloy">বেসরকারি বিমান পরিবহন ও পর্যটন মন্ত্রণালয়</string>
 
@@ -135,6 +61,4 @@
     <string name="press_again_to_exit">অ্যাপটি বন্ধ করতে আবার প্রেস করুন</string>
     <string name="details_page_title">Content Details</string>
     <string name="language_changed">ইংরেজি</string>
-
-
-</resources>-->
+</resources>

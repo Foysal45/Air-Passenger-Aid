@@ -5,7 +5,9 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ResolveInfo
+import android.content.res.Configuration
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -17,7 +19,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
@@ -25,16 +26,17 @@ import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.*
+import androidx.preference.PreferenceManager
 import com.mocat.airpassengeraid.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.switchmaterial.SwitchMaterial
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.messaging.FirebaseMessaging
 import com.mocat.airpassengeraid.ui.search.SearchActivity
-import com.mocat.airpassengeraid.ui.search.SearchFragment
 import com.mocat.airpassengeraid.utils.SessionManager
 import com.mocat.airpassengeraid.utils.hideKeyboard
-import org.koin.android.ext.android.inject
+import java.util.*
 import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
@@ -46,16 +48,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var notificationCountTV: TextView
     private lateinit var searchEditText: TextView
+   // private lateinit var langSwitch: Switch
     private var navigationMenuId: Int = 0
     private var menuItem: MenuItem? = null
     private lateinit var notificationImageView: ImageView
     private var fcmToken: String = ""
+    private var languageChangeCount: Int = 0
 
     //Connectivity
     private var snackBar: Snackbar? = null
     //private lateinit var connectivityReceiver: ConnectivityReceiver
 
-    @SuppressLint("HardwareIds")
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -65,6 +69,7 @@ class MainActivity : AppCompatActivity() {
         notificationCountTV = findViewById(R.id.tvNotification)
         notificationImageView = findViewById(R.id.notification_id)
         searchEditText = findViewById(R.id.suggestiveSearchET)
+
 
         /*setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -80,6 +85,7 @@ class MainActivity : AppCompatActivity() {
         manageNavigationItemSelection()
         goToNotification()
         goToSearch()
+        langSwitchToCloseDrawerMenu()
 
         //val deviceUniqueId = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
        // appUpdateManager()
@@ -94,6 +100,81 @@ class MainActivity : AppCompatActivity() {
         binding.appBarHome.homeId.setOnClickListener{
             onBackPressed()
             //onBackPressed()
+        }
+
+    }
+
+    private fun langSwitchToCloseDrawerMenu(){
+        val navHeaderView = binding.navView.getHeaderView(0)
+        val langSwitch: SwitchMaterial = navHeaderView.findViewById(R.id.activeSwitch)
+        langSwitch.setOnClickListener {
+            languageChangeCount++
+            if (languageChangeCount % 2 == 0) {
+                langSwitch.text="English"
+            } else {
+                langSwitch.text="বাংলা"
+                //Toast.makeText(activity, "$articleId_ = $articleId_", Toast.LENGTH_SHORT).show()
+            }
+
+            /*val locale = Locale("bn")
+            Locale.setDefault(locale)
+            val config = Configuration()
+            config.setLocale(locale)
+            baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)*/
+           // binding.drawerLayout.closeDrawer(binding.navView)
+
+        }
+    }
+
+    private fun changeLanguage(languageCode: String) {
+        LocaleHelper.setLocale(this, languageCode)
+        recreate()
+    }
+
+ /*   object LocaleHelper {
+
+        fun onAttach(context: Context): Context {
+            val lang = getLanguage(context)
+            return setLocale(context, lang)
+        }
+
+        fun setLocale(context: Context, lang: String): Context {
+            saveLanguage(context, lang)
+            return updateResources(context, lang)
+        }
+
+        fun getLanguage(context: Context): String {
+            val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+            return prefs.getString("language", "en") ?: "en"
+        }
+
+        private fun saveLanguage(context: Context, lang: String) {
+            val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+            prefs.edit().putString("language", lang).apply()
+        }
+
+        private fun updateResources(context: Context, lang: String): Context {
+            val locale = Locale(lang)
+            Locale.setDefault(locale)
+            val config = Configuration()
+            config.setLocale(locale)
+            return context.createConfigurationContext(config)
+        }
+    }*/
+
+    object LocaleHelper {
+        fun setLocale(context: Context, languageCode: String) {
+            val locale = Locale(languageCode)
+            Locale.setDefault(locale)
+
+            val config = Configuration()
+            config.setLocale(locale)
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                context.createConfigurationContext(config)
+            } else {
+                context.resources.updateConfiguration(config, context.resources.displayMetrics)
+            }
         }
     }
 
